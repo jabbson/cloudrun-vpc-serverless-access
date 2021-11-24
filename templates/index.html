@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CONN_TEST</title>
+</head>
+<body>
+
+    {% if result %}
+      CONNECTION TO <b>{{host}}:{{port}}</b><br/>
+      RESULT: <span style="color:
+        {% if result == "SUCCESS" %}
+            green
+        {% else %}
+            red
+        {% endif %}
+      "><b> {{ result }}</b></span>
+    {% endif %}
+
+    <form action="" method="post">
+        <p>
+            <label for="host">HOST</label>
+            <input type="text" name="host">
+        </p>
+        <p>
+            <label for="port">PORT</label>
+            <input type="text" name="port">
+        </p>
+        <p>
+            <input type="submit">
+        </p>
+    </form>
+
+</body>
+</html>
